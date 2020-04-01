@@ -1,6 +1,9 @@
 from flask import Flask, request, make_response, redirect, render_template
 app = Flask(__name__)
 todos=['Comprar cafe', 'Enviar solicitud de compra','Entregar video al productor']
+
+
+
 @app.route('/')
 def index():
   user_ip = request.remote_addr
