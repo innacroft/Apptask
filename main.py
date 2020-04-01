@@ -1,6 +1,6 @@
-from flask import Flask, request, make_response, redirect
+from flask import Flask, request, make_response, redirect, render_template
 app = Flask(__name__)
-
+todos=['Comprar cafe', 'Enviar solicitud de compra','Entregar video al productor']
 @app.route('/')
 def index():
   user_ip = request.remote_addr
@@ -11,9 +11,14 @@ def index():
 @app.route('/hello')
 def hello_world():
 #creamos nueva variable de la ip que detectamos en el browser
-  user_ip = request.cookies.get('user_ip')
 
-  return'Hello, Word, tu IP es {}'.format(user_ip)
-  
+  user_ip = request.cookies.get('user_ip')
+  context={
+    'user_ip':user_ip,
+    'todos':todos
+  }
+
+  return render_template('hello.html', **context)
+
 if __name__ == "__main__":
     app.run(debug=True)
