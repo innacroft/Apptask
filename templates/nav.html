@@ -1,7 +1,26 @@
-<nav>
+<!-- <nav>
   <ul>
     <img src="{{ url_for('static', filename='images/platzi.png')}}" alt="platzi logo">
     <li><a href="{{ url_for('index') }}">Ir a inicio</a></li>
     <li><a href="https://platzi.com/" target="_blank">Ir a platzi</a></li></li>
   </ul>
-</nav>
+</nav> -->
+<div class="navbar navbar-expand-lg navbar-dark bg-dark"role="navigation">
+        <div class="navbar-brand"href="{{ url_for('index') }}">
+            <button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#navbarNavAltMarkup"aria-controls="navbarNavAltMarkup"aria-expanded="false"aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+            <div class="collapse navbar-collapse"id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="navbar-brand" >
+                        <img src="{{ url_for('static', filename='images/platzi.png') }}"
+                             style="max-width: 48px"
+                             alt="Platzi logo">
+                    </a>
+                  <a class="nav-item nav-link active"href="{{ url_for('index') }}">Inicio<span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link"href="https://platzi.com"target="_blank">Platzi</a>
+                </div>
+              </div>
+        </div>
+</div>
