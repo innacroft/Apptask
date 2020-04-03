@@ -8,7 +8,11 @@ Bienvenido
 {% endblock%}
 
 {% block content %}
+  {% if username %}
+  <h1>Bienvenido, {{username | capitalize}} </h1>
+  {% endif %}
   {% if user_ip %}
+
     <h1> Hello World platzi, tu ip es {{user_ip}}</h1>
   {% else %}
   <a href="{{ url_for('index') }}">ir a inicio</a>
