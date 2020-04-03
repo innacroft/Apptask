@@ -22,7 +22,7 @@ class MainTest(TestCase):
     response= self.client.get(url_for('hello'))
     self.assert200(response)
   
-  def test_hello_post(self): #hello regresa 200 cuando se hace post
+  def test_hello_post(self): #hello verificacion de  post
     fake_form={
       'username':'fake' ,
       'password': 'fake-passw'
