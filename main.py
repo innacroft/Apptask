@@ -1,26 +1,13 @@
-import click
-
-from flask import Flask, request, make_response, redirect, render_template,session,flash,url_for
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
+from flask import request, make_response, redirect, render_template, session, url_for, flash
 import unittest
 
-app = Flask(__name__)
-
-#inicializacion de librerias
-bootstrap= Bootstrap(app)
-
-app.config['SECRET_KEY']='SUPER SECRETO'
+from app import create_app
+from app.forms import LoginForm
+from app.firestore_service import get_users, get_todos
+from flask_login import login_required, current_user
+app = create_app()
 
 todos=['Comprar cafe', 'Enviar solicitud de compra','Entregar video al productor']
-
-class LoginForm(FlaskForm):
-  username=StringField('Nombre de usuario',validators=[DataRequired()])
-  password=PasswordField('Password',validators=[DataRequired()])
-  submit= SubmitField('Enviar')
-
 
 @app.cli.command() #crea commando con click para crear los tests
 def test():
@@ -45,26 +32,22 @@ def index():
   return response
 
 @app.route('/hello', methods=['GET','POST'])
+@login_required
 def hello():
 #creamos nueva variable de la ip que detectamos en el browser
 
   #user_ip = request.cookies.get('user_ip')
   user_ip= session.get('user_ip')
-  login_form= LoginForm()
+  username= current_user.id
   username= session.get('username')
   context={
     'user_ip':user_ip,
-    'todos':todos,
-    'login_form':login_form,
+    'todos':get_todos(user_id=username),
     'username':username
   }
-  if login_form.validate_on_submit():
-    username=login_form.username.data 
-    session['username']=username
-    flash('nombre de usuario registrado ')
-    return redirect(url_for('index'))
 
   return render_template('hello.html', **context)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

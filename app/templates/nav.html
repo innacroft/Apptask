@@ -13,6 +13,9 @@
           
             <div class="collapse navbar-collapse"id="navbarNavAltMarkup">
                 <div class="navbar-nav">
+                  {% if current_user.is_authenticated %}
+                  <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                  {% endif %}
                     <a class="navbar-brand" >
                         <img src="{{ url_for('static', filename='images/platzi.png') }}"
                              style="max-width: 48px"

@@ -1,4 +1,6 @@
 flask
 flask-bootstrap
 flask-wtf
-flask-test
+flask-testing
+firebase-admin
+flask-login
