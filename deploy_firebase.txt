@@ -1,0 +1,7 @@
+1.Crear archivo app.yaml ---> runtime: python37
+2.Crear nuevo proyecto en gcloud para producción
+3.Cambiar el proyecto actual de gcloud : gcloud init
+4.Ejecutar el comando: gcloud app deploy app.yaml
+5.Activar firestore en gcloud 
+6.Ejecutar el comando: gcloud app browse
+7. Ingresar a la ruta generada por gcloud y probar la app.
