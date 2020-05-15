@@ -1,8 +1,8 @@
 ### TODO page
-📝 🌶️  
+📝 🌶️  🐍
 
 #### Description
-Simple page for manage todo tasks with login users.
+Simple page for manage todo tasks.
 
 #### Features
 Loggin manager secure for users.
