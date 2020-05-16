@@ -21,7 +21,7 @@ Create, edit and delete tasks.
 ### FEED
 ![](https://github.com/innacroft/flask/tree/master/app/static/images/feed.PNG)
 ### SIGNUP
-![](https://github.com/innacroft/flask/tree/master/app/static/images/signup.PNG)
+![](https://github.com/innacroft/flask/blob/master/app/static/images/signup.PNG)
 
 #### Other resources
 - https://platzi.com/
