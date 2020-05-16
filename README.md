@@ -19,7 +19,7 @@ Create, edit and delete tasks.
 ### LOGIN
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/login.PNG)
 ### FEED
-![](https://github.com/innacroft/flask/tree/master/app/static/images/feed.PNG)
+![](https://github.com/innacroft/flask/tree/master/app/static/images/feed.png)
 ### SIGNUP
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/signup.PNG)
 
