@@ -25,8 +25,11 @@
                         data-toggle="collapse"
                         data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
- 
                 </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    <p>TASKAPP</p>
+                   
+                </a>
                 <a class="navbar-brand" href="{{ url_for('index') }}">
                     <img src="{{ url_for('static', filename='images/task-page.png') }}"
                          style="max-width: 50px"
