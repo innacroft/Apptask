@@ -9,24 +9,41 @@
 
 {% block content %}
     {% if username %}
-        <h1>Bienvenido, {{ username | capitalize }}</h1>
+    <div class="container header_name text-center">
+        <section class="container section_name">
+        <img src="../static/images/3610726.jpg" alt="image" class="image">
+        <h4>Hola, {{ username }} empecemos! </h4>
+        </section>
+    </div>
     {% endif %}
 
-    {% if user_ip %}
-        <h3>Tu IP es {{ user_ip }}</h3>
-    {% else %}
-        <a href="{{ url_for('index') }}">Ir a inicio</a>
-    {% endif %}
-
-    <div class="container">
+    <div class="container newtask">
         <h2>Crea una nueva tarea</h2>
 
         {{ wtf.quick_form(todo_form) }}
     </div>
 
+    <div class="container listask">
+        <h2>Mi lista de tareas</h2>
     <ul class="list-group">
+        <div class="row">
+            <div class="col-lg-3 text-center col-md-3 col-sm-3 col-xs-3">
+                <h6>Tarea</h6>
+            </div>
+            <div class="col-lg-3 text-center col-md-3 col-sm-3  col-xs-3">
+                <h6>¿ Realizada  ?</h6>
+            </div>
+            <div class="col-lg-3 text-center col-md-3 col-sm-3  col-xs-3">
+                <h6>¿ Deseas cambiar el estado de la tarea ?</h6>
+            </div>
+            <div class="col-lg-3 text-center col-md-3 col-sm-3  col-xs-3">
+                <h6>¿ Deseas borrar la tarea  ?</h6>
+            </div>
+           
+        </div>
         {% for todo in todos %}
             {{ macros.render_todo(todo, delete_form, update_form) }}
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

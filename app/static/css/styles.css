@@ -1,7 +1,93 @@
 html * {
-font-family: sans-serif;
+  font-family: sans-serif;
+  color: #258476;
+}
+.navbar-default{
+  margin-bottom: 0px;
 }
 
-img{
-  max-width: 20px;
+h1{
+  
+  color:#00DFC0;
+  font-family: 'Shadows Into Light', cursive;
+}
+h2{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #00B399 ;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
+
+#section_name{
+  padding-top: 50px;
+  background-image: url('../images/photo2.jpg');
+  padding-bottom: 20px;
+  text-align: center;
+}
+#submit{
+  background-color: #00DFC0;
+  height:30px;
+  width:100%;
+  color: white;
+  
+}
+
+.header_name img{
+  height: 400px;
+  opacity: 0.3;
+}
+
+.header_name h4{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Shadows Into Light', cursive;
+  color: black;
+  font-size: 80px;
+  size: 300px;  
+}
+
+.newtask{
+  padding-bottom: 50px;
+  width: 40%;
+  
+}
+.listask
+{
+  border-top-style: solid;
+  border-color: gray;
+  background-image: url('../images/414048-PDYEO7-221.jpg');
+}
+.list-group-item{
+  background-color: transparent;
+}
+
+h6{
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buttons_form{
+ 
+}
+.description_text{
+ color: black; 
+}
+p
+{ 
+  color:#00DFC0;
+}
+
+.listask .btn_update #submit{
+  width: 70%;
+  background-color: #FF7F50;
+}
+
+.listask .btn_delete #submit{
+  width: 70%;
+  background-color:#FF6347;
 }

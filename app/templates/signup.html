@@ -6,9 +6,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Registra una cuenta</h1>
-
-    <div class="container">
-        {{ wtf.quick_form(signup_form) }}
+<div class="container signup" >
+    <div class="row">
+        <h2>¡ Que no te quede alguna tarea pendiente !</h2><br>
+    </div>   
+    <div class="row">
+        <div class="col-lg-6 text-center">
+            <img src="../static/images/3610726.jpg" alt="image" width="400px" height="400px">
+        </div>
+        <div class="col-lg-6 ">
+        
+        <h1>Regístrate  </h1>     
+                {{ wtf.quick_form(signup_form) }}   
+        </div>
+       
     </div>
+</div>
 {% endblock %}

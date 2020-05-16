@@ -14,6 +14,13 @@ Create, edit and delete tasks.
 - HTML
 - Bootstrap
 
+#### VIEWS
+###LOGIN
+![](https://github.com/innacroft/flask/tree/master/app/static/images/login.PNG)
+###FEED
+![](https://github.com/innacroft/flask/tree/master/app/static/images/feed.PNG)
+###SIGNUP
+![](https://github.com/innacroft/flask/tree/master/app/static/images/signup.PNG)
 
 #### Other resources
 - https://platzi.com/

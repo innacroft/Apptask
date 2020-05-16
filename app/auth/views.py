@@ -29,7 +29,7 @@ def login():
                 user = UserModel(user_data)
                 print(f'-user: {user}')
                 status=login_user(user)
-                flash('Bienvenido de nuevo')
+               
                 redirect(url_for('hello'))
             else:
                 flash('La información no coincide')
@@ -57,7 +57,7 @@ def signup():
       user_put(user_data)
       user= UserModel(user_data)
       login_user(user)
-      flash('Bienvenido')
+      
       
       return redirect(url_for('hello'))
     else:
@@ -69,5 +69,5 @@ def signup():
 @login_required
 def logout():
   logout_user()
-  flash('regresa pronto')
+  flash('Regresa pronto !')
   return redirect(url_for('auth.login'))

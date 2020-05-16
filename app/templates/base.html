@@ -4,9 +4,11 @@
     {{ super() }}
 
     <title>
-        {% block title %}Flask Platzi |{% endblock %}
+        {% block title %}TareaAPP{% endblock %}
     </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="icon" type="favicon.png" href="../static/images/task-page.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}

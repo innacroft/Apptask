@@ -1,11 +1,5 @@
-<!-- <nav>
-  <ul>
-    <img src="{{ url_for('static', filename='images/platzi.png')}}" alt="platzi logo">
-    <li><a href="{{ url_for('index') }}">Ir a inicio</a></li>
-    <li><a href="https://platzi.com/" target="_blank">Ir a platzi</a></li></li>
-  </ul>
-</nav> -->
-<div class="navbar navbar-inverse" role="navigation">
+
+<!-- <div class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
       <div class="navbar-header">
           <button type="button"
@@ -18,20 +12,40 @@
               <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="{{ url_for('index') }}">
-              <img src="{{ url_for('static', filename='images/platzi.png') }}"
-                   style="max-width: 48px"
-                   alt="Platzi logo">
+              <img src="{{ url_for('static', filename='') }}"
+                   style="max-width: 20px"
+                   alt="logo">
           </a>
-      </div>
-
+      </div> -->
+      <div class="navbar navbar-default navbar-static-top " role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+ 
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/task-page.png') }}"
+                         style="max-width: 50px"
+                         alt="task logo">
+                </a>
+            </div>
+            
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              {% if current_user.is_authenticated %}
-                  <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-              {% endif %}
-              <li><a href="{{ url_for('index') }}">Inicio</a></li>
-              <li><a href="https://platzi.com" target="_blank">Platzi</a></li>
+            
+            <li><a href="{{ url_for('auth.signup') }}">Registrar nuevo usuario</a></li>
+              <li><a href="{{ url_for('index') }}">Mis tareas</a></li>
+            </ul>
+              <ul class="nav navbar-nav navbar-right"> 
+            {% if current_user.is_authenticated %}
+              <li><a href="{{ url_for('auth.logout') }}">SALIR</a></li>
+          {% endif %}
           </ul>
+        
       </div>
   </div>
 </div>
