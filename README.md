@@ -23,6 +23,8 @@ Create, edit and delete tasks.
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/feed.PNG)
 ### SIGNUP
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/signup.PNG)
+### PATH STRUCTURE
+![](https://github.com/innacroft/flask/blob/master/app/static/images/estructura_carpetas.PNG)
 
 #### Other resources
 - https://platzi.com/
