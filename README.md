@@ -16,14 +16,11 @@ Create, edit and delete tasks.
 - Bootstrap
 
 #### VIEWS
+
 ### LOGIN
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/login.PNG)
 ### FEED
-<<<<<<< HEAD
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/feed.png)
-=======
-![](https://github.com/innacroft/flask/tree/master/app/static/images/feed.PNG)
->>>>>>> 4952fbeaa9bdc5757b36e04285ade30cc5375579
 ### SIGNUP
 ![](https://github.com/innacroft/flask/blob/master/app/static/images/signup.PNG)
 
