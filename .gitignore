@@ -1,1 +1,4 @@
 /vnv/*
+__pycache__
+.env
+
