@@ -1,4 +1,7 @@
 /vnv/*
-__pycache__
+__pycache__/
+*.pyo
+*.pyc
+env
 .env
 
